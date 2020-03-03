@@ -14,3 +14,10 @@ type DiffusionQueryCommitsRequest struct {
 	Limit          uint64   `json:"limit"`
 	Request
 }
+
+// DiffusionRepositorySearchRequest represents a request to the
+// diffusion.repository.search call.
+type DiffusionRepositorySearchRequest struct {
+	Request
+	SearchRequest
+}

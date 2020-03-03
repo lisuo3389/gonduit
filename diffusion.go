@@ -17,3 +17,16 @@ func (c *Conn) DiffusionQueryCommits(
 
 	return &res, nil
 }
+
+// DiffusionRepositorySearch performs a call to diffusion.repository.search.
+func (c *Conn)DiffusionRepositorySearch(
+	req requests.DiffusionRepositorySearchRequest,
+	) (*responses.DiffusionRepositorySearchResponse, error) {
+	var res responses.DiffusionRepositorySearchResponse
+
+	if err := c.Call("diffusion.repository.search", &req, &res); err != nil {
+		return nil, err
+	}
+
+	return &res, nil
+}

@@ -18,3 +18,20 @@ type DiffusionCommit struct {
 	Committer      string `json:"committer"`
 	CommitterName  string `json:"committerName"`
 }
+
+type RepositorySearchField struct {
+	Name               string                 `json:"name"`
+	Vcs                string                 `json:"vcs"`
+	Callsign           string                 `json:"callsign"`
+	ShortName          string                 `json:"shortName"`
+	Status             string                 `json:"status"`
+	IsImporting        bool                   `json:"isImporting"`
+	AlmanacServicePHID string                 `json:"almanacServicePHID"`
+	RefRules           map[string][]string    `json:"refRules"`
+	DefaultBranch      string                 `json:"defaultBranch"`
+	Description        string                 `json:"description"`
+	SpacePHID          string                 `json:"spacePHID"`
+	DateCreated        int64                  `json:"dateCreated"`
+	DateModified       int64                  `json:"dateModified"`
+	Policy             map[string]interface{} `json:"policy"`
+}
